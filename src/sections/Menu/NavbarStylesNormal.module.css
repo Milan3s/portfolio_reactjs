@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.navbar {
+  height: 63px;
+  background-color: #1a1a1a;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: -20px;
+  font-family: "Courier", monospace; /* Aplica Courier a todo el navbar */
+}
+
+.logo {
+  font-family: 'Permanent Marker', cursive; /* Fuente tipo grafiti */
+  color: #ffffff; /* Amarillo brillante */
+  font-size: 32px; /* Tamaño del texto del logo */
+  font-weight: 400; /* Peso más ligero */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  margin-left: 0; /* Ajusta el margen si es necesario */
+  text-decoration: none;
+}
+
+.logo a {
+  color: inherit; /* Hereda el color del contenedor */
+  text-decoration: none; /* Sin subrayado */
+  cursor: pointer;
+}
+
+.logo i {
+  font-size: 0; /* Opcional, si decides eliminar un ícono previo */
+}
+
+
+.menuLinks a {
+  font-weight: 500;
+  color: #999999;
+  padding: 8px 16px;
+  transition: color 0.2s ease;
+  font-family: "Courier", monospace; /* Fuente Courier para los enlaces */
+}
+
+.menuLinks a:hover {
+  color: white;
+}
+
+.menuLinks a.active {
+  color: white;
+  font-weight: bold;
+}
+
+
+.menuBtn {
+  font-size: 32px;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+/* Media query para ocultar el navbar completo en dispositivos móviles y tabletas */
+@media (max-width: 850px) {
+  .navbar {
+    display: none;
+  }
+}
+
+/* Estilos para el navbar en tablets en orientación vertical con un logo más grande */
+@media (min-width: 600px) and (max-width: 900px) and (orientation: portrait) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 55px 40px;
+    margin-left: auto;
+        margin-right: auto;
+  }
+
+  .logo {
+    text-align: center;
+    font-size: 36px; /* Aumenta ligeramente el tamaño */
+  }
+
+  .logo i {
+    font-size: 3em; /* Aumenta el tamaño del ícono del logo */
+    margin-right: 8px;
+  }
+
+  .menuLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .menuLinks a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+  }
+
+  .menuLinks a .fa-icon {
+    font-size: 1.5em;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 599px) {
+  .navbar {
+    display: none;
+  }
+}
+
+
+/* Ajuste para evitar márgenes no deseados */
+section,
+main,
+.content {
+  margin-top: 0;
+  padding-top: 0;
+}

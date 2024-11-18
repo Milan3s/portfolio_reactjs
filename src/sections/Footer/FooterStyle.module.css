@@ -1,0 +1,14 @@
+/* FooterStyle.module.css */
+.footer {
+  background-color: #000000; /* Fondo oscuro fijo */
+  color: #ffffff !important; /* Texto blanco fijo */
+  text-align: center;
+  padding: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8rem;
+}
+
+.text_footer {
+  margin: 0;
+  color: #ffffff !important; /* Asegura que el texto del footer sea blanco */
+}

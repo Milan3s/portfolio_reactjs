@@ -1,38 +1,167 @@
-.App {
-  text-align: center;
+:root {
+  --background-color: #fff;
+  --section-bg-color: #f0f0f0;
+  --btn-color: #0987f2;
+  --btn-text-color: #fff;
+  --project-card-bg: #ffffff00;
+  --text-color: #222;
+  --form-text-color: #ffffff;
+  --footer-bg-color: #000;
+  --footer-text-color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+[data-theme='dark'] {
+  --background-color: #222;
+  --section-bg-color: #333;
+  --btn-color: #fff;
+  --btn-text-color: #222;
+  --project-card-bg: #fff;
+  --text-color: #fff;
+  --form-text-color: #fff;
+  --footer-bg-color: #0a0a0a;
+  --footer-text-color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-top: 0;
+}
+
+h1, h2, h3, p {
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+h2, h3, p {
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+}
+
+h2, h3 {
+  font-size: 20px;
+}
+
+h1 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 32px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* Ajuste para el título de la sección */
+.sectionTitle {
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+
+/* Fondo y estilo de las secciones */
+.habilidadesSection,
+.descripcionSection,
+.herramientasSection {
+  background-color: var(--section-bg-color);
+  padding: 0 20px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  box-sizing: border-box;
+  scroll-margin-top: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Estilos específicos para el footer */
+.footer {
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color); /* Siempre blanco */
+  text-align: center;
+  padding: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footerDark {
+  color: white !important; /* Texto blanco en modo oscuro */
+}
+
+.footer .text {
+  margin: 0;
+}
+
+
+/* Ajuste para pantallas pequeñas para evitar solapamiento */
+@media (max-width: 799px) {
+  .habilidadesSection,
+  .descripcionSection,
+  .herramientasSection {
+    min-height: calc(100vh - 50px);
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .scrollMarginActive {
+    scroll-margin-top: 50px;
+  }
+}
+
+section {
+  padding: 0;
+  margin: 0;
+}
+
+.hover {
+  cursor: pointer;
+}
+
+/* Media queries para pantallas más grandes */
+@media (min-width: 800px) {
+  #root {
+    gap: 100px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2, h3 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .sectionTitle {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 1400px) {
+  #root {
+    gap: 150px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .sectionTitle {
+    margin-bottom: 75px;
   }
 }

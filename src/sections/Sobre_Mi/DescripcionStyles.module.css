@@ -1,0 +1,401 @@
+/* Estilos generales */
+/* Fuente para el nombre */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap'); /* Ejemplo: fuente tipo graffiti */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ajuste específico para pantallas móviles */
+@media (max-width: 799px) {
+    .scrollMarginActive {
+        scroll-margin-top: 50px;
+        /* Ajuste menor para pantallas móviles */
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color);
+}
+
+/* Contenedor principal para cada sección */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    /* Ocupa toda la pantalla */
+    padding: 0 20px;
+    /* Elimina padding superior e inferior */
+    box-sizing: border-box;
+    gap: 20px;
+    background-color: var(--section-bg-color);
+    /* Fondo que cambia con el tema */
+}
+
+.name {
+    font-family: 'Permanent Marker', cursive; /* Fuente estilo graffiti */
+    font-size: 3rem;
+    font-weight: 400; /* Peso más ligero */
+    position: relative;
+    margin-bottom: 15px;
+    text-align: center;
+    letter-spacing: 1.5px; /* Espaciado entre letras */
+}
+
+/* Estilos para el nombre en modo claro */
+.lightTheme {
+    color: #000; /* Texto negro para fondo blanco */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+/* Estilos para el nombre en modo oscuro */
+.darkTheme {
+    color: #fff; /* Texto blanco para fondo negro */
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3); /* Sombra sutil */
+}
+
+
+/* Divider estilizado */
+.dividerLight {
+    width: 150px; /* Ancho más grande para destacar */
+    height: 2px; /* Más grueso */
+    background-color: #000; /* Negro en fondo claro */
+    margin: 0 auto 20px;
+    border: none;
+}
+
+.dividerDark {
+    width: 150px; /* Ancho más grande para destacar */
+    height: 2px; /* Más grueso */
+    background-color: #fff; /* Blanco en fondo oscuro */
+    margin: 0 auto 20px;
+    border: none;
+}
+
+
+
+/* Ajuste para cada sección específica */
+.descripcion {
+    max-width: 300px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 87px;
+}
+
+/* Iconos de redes sociales */
+.socialLinks {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialLinks a img {
+    width: 24px;
+    transition: transform 0.2s ease;
+}
+
+.socialLinks a img:hover {
+    transform: scale(1.1);
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 15px; /* Espacio entre los botones */
+    justify-content: center;
+    margin-top: 16px;
+}
+
+
+/* Estilo para el botón "Open to Work" */
+.openToWorkButton {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #e8f5e9; /* Fondo verde claro */
+    color: #388e3c; /* Texto verde oscuro */
+    border: 2px solid #388e3c; /* Borde verde oscuro */
+    border-radius: 8px;
+    width: 160px;
+    height: 46px;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 3px;
+}
+
+.openToWorkButton:hover {
+    background-color: #388e3c; /* Fondo verde oscuro en hover */
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.openToWorkButton:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Punto verde para indicar "Open to Work" con animación de parpadeo */
+.greenDot {
+    width: 10px;
+    height: 10px;
+    background-color: #00c853; /* Verde para el punto */
+    border-radius: 50%;
+    display: inline-block;
+    animation: blink 1s infinite; /* Aplica la animación de parpadeo */
+}
+
+/* Animación de parpadeo */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Comienza y termina visible */
+    }
+    50% {
+        opacity: 0; /* Desaparece en el medio */
+    }
+}
+
+.downloadButton {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    width: 160px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.downloadButton:hover {
+    background-color: #000000;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.downloadButton:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.downloadIcon {
+    width: 20px;
+    height: 20px;
+    color: inherit;
+}
+.customClass {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+}
+
+.customClass:hover {
+    cursor: pointer;
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 799px) {
+    .container {
+        padding: 0;
+        min-height: 89vh; /* Asegura que ocupe toda la pantalla */
+        gap: 10px; /* Reduce el espacio entre elementos */
+    }
+
+    .customClass{
+        right: 29px;
+        top: 23px;
+    }
+
+    .name {
+        font-size: 2rem; /* Reduce el tamaño del texto */
+        margin-bottom: 6px; /* Restaura un margen adecuado */
+        letter-spacing: 1px; /* Reduce el espaciado entre letras */
+        margin-top: -18px;
+    }
+
+    .descripcion {
+        max-width: 90%;
+        line-height: 1.3; /* Reduce el espacio entre líneas */
+        margin: 0;
+    }
+
+    .info {
+        gap: 8px; /* Reduce la separación entre elementos */
+        margin-bottom: 80px; /* Restaura el margen inferior */
+    }
+
+    .socialLinks {
+        gap: 8px; /* Reduce el espacio entre iconos */
+        margin-top: 14px;
+        margin-bottom: 9px;
+    }
+
+    .socialLinks a img {
+        width: 20px; /* Tamaño más pequeño para iconos */
+        height: 20px;
+    }
+
+    .downloadButton {
+        width: 130px; /* Botón más pequeño */
+        height: 45px;
+        font-size: 14px; /* Texto más pequeño */
+        
+    }
+
+    .downloadIcon {
+        width: 18px; /* Icono más pequeño */
+        height: 18px;
+    }
+    .openToWorkButton {
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #e8f5e9;
+        color: #388e3c;
+        border: 2px solid #388e3c;
+        border-radius: 8px;
+        width: 160px;
+        height: 43px;
+        font-size: 13px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 3px;
+    }
+
+}
+
+
+/* Media query para pantallas grandes */
+@media (min-width: 800px) {
+    .container {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        gap: 181px;
+    }
+
+    .descripcion {
+        max-width: 362px;
+        font-size: 1.0rem; /* Incrementa el tamaño del texto de descripción */
+        line-height: 1.8; /* Da más espacio entre líneas */
+    }
+
+    .info h2 {
+        font-size: 2rem; /* Incrementa el tamaño del título "Backend Developer" */
+        font-weight: bold; /* Asegura que sea más destacado */
+    }
+}
+
+
+/* Ajustes específicos para tablet en orientación vertical */
+@media (min-width: 600px) and (max-width: 900px) and (orientation: portrait) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        gap: 30px;
+    }
+
+    .colorModeContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .descripcion {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .info {
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .socialLinks {
+        gap: 25px;
+    }
+
+    .socialLinks a img {
+        width: 32px;
+        height: 32px;
+        transition: transform 0.2s ease;
+    }
+
+    button {
+        width: 170px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    /* Mover customClass 100px hacia la derecha */
+    .customClass {
+        transform: translateX(195px);
+    }
+}
+
+
+/* Ajustes de color para modo oscuro y claro */
+:root {
+    --background-color: #fff;
+    --section-bg-color: #f0f0f0;
+    /* Fondo claro para las secciones */
+    --btn-color: #0aa5ff;
+    --btn-text-color: #fff;
+    --text-color: #222;
+}
+
+body.light-theme {
+    --btn-color: #000;
+    --btn-text-color: #ffffff;
+    --background-color: #ffffff;
+    --section-bg-color: #f0f0f0;
+}
+
+body.dark-theme {
+    --btn-color: #ffffff;
+    --btn-text-color: #000;
+    --background-color: #222;
+    --section-bg-color: #333;
+}

@@ -1,0 +1,216 @@
+/* Sección principal */
+.herramientasSection {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.titleContainer {
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  color: #333;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  margin-top: -13px;
+}
+
+.divider {
+  width: 80px;
+  height: 2px;
+  background-color: #333;
+  border: none;
+  margin: 10px auto;
+}
+
+.description {
+  color: #666;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  line-height: 1.8;
+  text-align: center;
+  margin-top: 28px;
+  margin-bottom: 70px;
+}
+
+/* Contenedor de herramientas */
+.toolsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Tarjeta */
+.toolCard {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 180px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.toolCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon,
+.vscodeIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.toolTitle {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.toolDescription {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.4;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo de colores por herramienta */
+.github {
+  border-top: 4px solid #2b3137;
+}
+
+.gitBash {
+  border-top: 4px solid #ff6b4a;
+}
+
+.vscode {
+  border-top: 4px solid #007ACC;
+}
+
+.netbeans {
+  border-top: 4px solid #1B6AC6;
+}
+
+.docker {
+  border-top: 4px solid #2496ED;
+}
+
+/* Responsividad */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .toolsContainer {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .toolCard {
+    width: 45%;
+    height: 178px;
+    margin: 0.5rem 0;
+  }
+
+  .icon,
+  .vscodeIcon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .toolTitle {
+    font-size: 0.95rem;
+  }
+
+  .toolDescription {
+    font-size: 0.8rem;
+  }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .toolsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 1.5rem; /* Espaciado entre las tarjetas */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .toolCard {
+    width: 100%; /* Ajusta al ancho de la columna */
+    height: 220px;
+  }
+
+  .icon,
+  .vscodeIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .toolTitle {
+    font-size: 1rem;
+  }
+
+  .toolDescription {
+    font-size: 0.9rem;
+  }
+}
+
+/* Pantallas grandes (escritorio) */
+@media (min-width: 1025px) {
+  .toolsContainer {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .toolCard {
+    width: 180px;
+    height: 195px;
+  }
+
+  .icon,
+  .vscodeIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .toolTitle {
+    font-size: 1rem;
+  }
+
+  .toolDescription {
+    font-size: 0.9rem;
+  }
+}

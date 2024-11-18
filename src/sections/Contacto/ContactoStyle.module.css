@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+/* Sección principal */
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #333333;
+  padding: 60px 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Contenedor del contenido */
+.contactContent {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Título */
+.title {
+  font-size: 2.8rem;
+  color: #222222;
+  font-weight: bold;
+  margin-top: -12px;
+  margin-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Línea divisoria */
+.divider {
+  width: 100px;
+  height: 2px;
+  background-color: #cccccc;
+  margin: 0 auto 30px;
+  border-radius: 1px;
+}
+
+/* Descripción */
+.description {
+  font-size: 1.2rem;
+  color: #666666;
+  margin-bottom: 40px;
+  line-height: 1.8;
+  max-width: 700px;
+}
+
+/* Contenedor de los botones */
+.card {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Estilo de cada botón */
+.contactItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1;
+  padding: 40px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333333;
+  border: 1px solid #e0e0e0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  flex-direction: column;
+}
+
+/* Hover para los botones */
+.contactItem:hover {
+  background-color: #f1f1f1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Iconos */
+.icon {
+  font-size: 2rem;
+  margin-right: 0;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+/* Botón de descarga */
+.downloadButton {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.downloadButton:hover {
+  background-color: #444444;
+}
+
+.downloadButton .icon {
+  color: #ffffff;
+}
+
+/* Mensaje de agradecimiento */
+.thankYouMessage {
+  margin-top: 50px;
+  font-size: 1.8rem;
+  color: #555555;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  font-style: italic;
+}
+
+/* RESPONSIVIDAD */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column; /* Apila los botones en columna */
+    gap: 20px; /* Reduce el espacio entre los botones */
+  }
+  
+  .contactItem {
+    padding: 20px; /* Reduce el padding interno */
+  }
+  
+  .description {
+    font-size: 1rem; /* Reduce ligeramente el tamaño del texto */
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 2.2rem; /* Reduce el tamaño del título */
+  }
+  
+  .thankYouMessage {
+    font-size: 1.5rem; /* Ajusta el tamaño del texto de agradecimiento */
+  }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card {
+    max-width: 700px; /* Ajusta el ancho máximo */
+    padding: 20px; /* Reduce ligeramente el padding */
+  }
+  
+  .contactItem {
+    padding: 30px; /* Reduce el padding interno */
+  }
+  
+  .title {
+    font-size: 2.5rem; /* Ajusta el tamaño del título */
+  }
+}

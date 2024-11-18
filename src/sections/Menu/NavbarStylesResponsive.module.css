@@ -1,0 +1,117 @@
+@media (max-width: 768px) {
+  /* Botón de cerrar en el menú */
+  .closeButton {
+    position: absolute;
+    top: 1rem; /* Mantener el botón cerca del borde superior */
+    right: 1rem; /* Mover el botón completamente a la derecha */
+    background: none; /* Quitar el fondo gris */
+    border: none; /* Quitar bordes */
+    font-size: 1.5rem; /* Tamaño de la flecha */
+    cursor: pointer;
+    color: black; /* Color del ícono */
+    transition: transform 0.3s ease; /* Suavizar la interacción */
+  }
+
+  .closeButton:hover {
+    transform: scale(1.1); /* Ligeramente más grande al pasar el cursor */
+    color: #007bff; /* Cambiar a azul claro en hover */
+  }
+
+  /* Primera caja fija (barra inferior) */
+  .fixedBox {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    background-color: #ffffff; /* Fondo blanco */
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Texto a la izquierda, ícono a la derecha */
+    padding: 0.4rem 1.5rem; /* Espaciado interno reducido */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    z-index: 30; /* Siempre visible por encima del contenido */
+    border-top: 1px solid #ddd; /* Borde superior */
+  }
+
+  .fixedBox span {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .fixedBox .icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  /* Segunda caja (menú desplegable) */
+  .menuContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    background-color: #ffffff; /* Fondo blanco */
+    color: black;
+    border-radius: 1rem 1rem 0 0; /* Bordes superiores redondeados */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); /* Sombra para elevar el menú */
+    z-index: 20; /* Aparece debajo de la barra fija */
+    padding: 1rem 1rem; /* Espaciado interno */
+    height: 37vh; /* Ajustar la altura para mostrar más contenido */
+    transition: transform 0.1s ease-in-out; /* Animación más rápida */
+  }
+
+  /* Cuadrícula de elementos en el menú */
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 1rem; /* Espaciado entre elementos */
+    justify-content: center;
+    padding-top: 2.4rem; /* Espaciado superior reducido */
+  }
+
+  /* Ítems individuales en el menú */
+  .menuItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 0.9rem;
+    font-weight: 500; /* Fuente más visible */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+  }
+
+  .menuItem:hover {
+    color: #007bff; /* Azul claro en hover */
+    transform: scale(1.1); /* Efecto zoom */
+  }
+
+  .icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem; /* Espaciado entre ícono y texto */
+  }
+
+  /* Etiqueta de texto en los ítems */
+  .label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-align: center;
+    color: black;
+  }
+}
+
+@media (min-width: 769px) {
+  /* Ocultar el menú en tabletas y escritorios */
+  .menuContainer,
+  .openButton {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .fixedBox {
+    display: none;
+  }
+}
+

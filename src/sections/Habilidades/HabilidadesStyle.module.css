@@ -1,0 +1,247 @@
+/* Ajuste para navegación con anclas en pantallas pequeñas */
+@media (max-width: 768px) {
+    .scrollMarginActive {
+        scroll-margin-top: 0px;
+        /* Ajuste para reducir el margen en dispositivos móviles */
+    }
+}
+
+.habilidadesSection {
+    padding: 0;
+    /* Elimina el padding para que no cause márgenes innecesarios */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.sectionTitle {
+    font-family: 'Courier New', Courier, monospace;
+    /* Aplica la fuente Courier */
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.divider {
+    width: 80px;
+    /* Ajusta el ancho para que coincida con el título */
+    height: 1px;
+    /* Establece la altura a 1px */
+    background-color: #333;
+    /* Color de la línea */
+    border: none;
+    margin: 0 auto 30px;
+    /* Centra la línea y añade espacio debajo */
+}
+
+
+.habilidadesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.habilidadCard {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    width: 100%;
+    max-width: 350px;
+}
+
+.habilidadCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.habilidadHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.habilidadIcon {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.tagContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Estilo específico para JavaScript y Linux */
+.tag.reactjs,
+.tag.linux {
+    color: #000;
+    background-color: white;
+}
+
+.tagIcon {
+    margin-right: 6px;
+    font-size: 1.25rem;
+}
+
+.habilidadTitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.habilidadDescription {
+    font-size: 1rem;
+    color: #666;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 700px;
+    line-height: 1.6;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        min-height: 100vh;
+        gap: 15px;
+    }
+
+    .habilidadesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .habilidadCard {
+        max-width: 93%;
+        padding: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+    }
+}
+
+/* Ajustes específicos para tablet en orientación vertical */
+@media (min-width: 600px) and (max-width: 900px) and (orientation: portrait) {
+    .habilidadesSection {
+        padding-top: 20px;
+    }
+
+    .sectionTitle {
+        font-size: 3rem;
+        margin-bottom: 30px;
+        margin-top: 49px;
+
+    }
+
+    .habilidadesGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* Dos columnas para ajustar mejor las tarjetas */
+        gap: 20px;
+        max-width: 900px;
+        /* Ajusta el ancho máximo del grid */
+        margin: 0 auto;
+    }
+
+    .habilidadCard {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        background-color: white;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: left;
+        width: 100%;
+    }
+
+    .habilidadCard:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .habilidadHeader {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .habilidadIcon {
+        font-size: 2rem;
+        color: #333;
+        margin-right: 10px;
+    }
+
+    .habilidadTitle {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .habilidadDescription {
+        font-size: 1.1rem;
+        color: #666;
+        line-height: 1.6;
+        margin-top: 10px;
+    }
+
+    .tagContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 10px;
+        border-radius: 20px;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .tagIcon {
+        margin-right: 6px;
+        font-size: 1.25rem;
+    }
+}
