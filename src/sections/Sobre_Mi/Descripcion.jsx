@@ -48,7 +48,7 @@ function Descripcion() {
                     <a href="https://x.com/Milan3s" target='_blank' rel="noopener noreferrer">
                         <img src={twitterIcon} alt="Twitter Icon" />
                     </a>
-                    <a href="https://www.linkedin.com/in/david-milanes-moreno/" target='_blank' rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/david-milan%C3%A9s/" target='_blank' rel="noopener noreferrer">
                         <img src={linkedinIcon} alt="LinkedIn Icon" />
                     </a>
                     <a href="https://github.com/Milan3s" target='_blank' rel="noopener noreferrer">
